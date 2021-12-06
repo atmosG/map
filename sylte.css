@@ -20,6 +20,17 @@ section
 {
     position: relative;
 }
+
+.inner-width
+{
+    max-width: 992px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+/* nav section */
 .navbar
 {
     width: 100%;
@@ -28,15 +39,7 @@ section
     top: 0;
     z-index: 9999;
     transition: .2s linear;
-}
-.inner-width
-{
-    max-width: 1320px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 auto;
-    height: 100px;
+    height: 80px;
 }
 .logo-container
 {
@@ -55,6 +58,7 @@ section
     margin-right: 10px;
     font-weight: 500;
 }
+/* home section */
 #home 
 {
     width: 100%;
@@ -62,7 +66,7 @@ section
     background: url(img/bg.jpg) no-repeat;
     background-size: cover;
     position: relative;
-    padding: 100px 0;
+    padding: 80px 0;
 }
 #home::before
 {
@@ -74,9 +78,42 @@ section
 }
 #home .inner-width 
 {
-    margin-top: 40px;
+    margin-top: 30px;
 }
-
+#home .time-container
+{
+    max-width: 25%;
+}
+#home .schedule-container
+{
+    width: 80%;
+    height: 100%;
+    position: relative;
+}
+#home .sked-form
+{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    padding: 10px 10px;
+}
+#home .sked-form select
+{
+    width: 20%;
+    margin: 0 20px;
+}
+#home .sked-area {
+    height: 90%;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px
+}
+#home .sked-area .sked 
+{
+    width: calc(25%);
+    height: calc(50%);
+}
 
 
 #weather
