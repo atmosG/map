@@ -13,23 +13,57 @@
     font-family: 'Outfit', sans-serif;
     text-decoration: none;
     list-style-type: none;
+    font-size: 14px;
+    color: #333;
 }
 
 /* Common Attribute */
 section
 {
     position: relative;
+    background: #f1f1f1;
+    padding: 80px 0;
 }
 
 .inner-width
 {
-    max-width: 992px;
+    max-width: 1140px;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     margin: 0 auto;
 }
+
+.section-title
+{
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    padding: 20px 80px;
+    margin-bottom: 60px;
+}
+.section-title::before
+{
+    content: "";
+    width: 80px;
+    height: 3px;
+    background: #333;
+    position: absolute;
+    left: calc(50% - 40px);
+    bottom: 2px;
+}
+.section-title::after
+{
+    content: "";
+    width: 20px;
+    height: 12px;
+    background: #a34e40;
+    border: 4px solid #f1f1f1;
+    position: absolute;
+    left: calc(50% - 13px);
+    bottom: -6px;
+}
+
 /* nav section */
 .navbar
 {
@@ -40,6 +74,12 @@ section
     z-index: 9999;
     transition: .2s linear;
     height: 80px;
+}
+.navbar .inner-width
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .logo-container
 {
@@ -57,6 +97,11 @@ section
     padding: 15px 15px;
     margin-right: 10px;
     font-weight: 500;
+    transition: .2s linear;
+}
+.navbar ul li a:hover
+{
+    color: rgb(163, 78, 64);
 }
 /* home section */
 #home 
@@ -78,36 +123,68 @@ section
 }
 #home .inner-width 
 {
-    margin-top: 30px;
+    margin-top: 50px;
 }
-#home .time-container
+/* #home .time-container
 {
     max-width: 25%;
-}
+} */
 #home .schedule-container
 {
-    width: 80%;
+    max-width: 80%;
     height: 100%;
     position: relative;
 }
-#home .sked-form
+#home .airline
 {
     width: 100%;
-    height: 10%;
+    display: flex;
+}
+#home .airline-tab
+{
+    width: 400px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 3px;
+    border-bottom-left-radius: 0;
+    font-weight: 500;
     display: flex;
     align-items: center;
-    padding: 10px 10px;
 }
-#home .sked-form select
+#home .airline-list
 {
-    width: 20%;
-    margin: 0 20px;
+    width: 100%;
+    display: flex;
+    z-index: 2;
 }
-#home .sked-area {
+#home .airline-item
+{
+    width: 25%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: .5s;
+}
+#home .airline-item.active 
+{
+    background-color: #3e3e3e;
+    color: #f6f5ef;
+    transform: scale(1.08);
+    border-radius: 3px;
+    position: relative;
+    font-size: 16px;
+}
+#home .sked-area 
+{
     height: 90%;
     background-color: rgba(255, 255, 255, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 20px
+    border-radius: 3px;
+    border-top-left-radius: 0;
 }
 #home .sked-area .sked 
 {
@@ -115,11 +192,72 @@ section
     height: calc(50%);
 }
 
-
-#weather
+/* Weather Section */
+#weather .continent
 {
-    height: 1000px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
 }
+#weather .continent a
+{
+    width: calc(33% - 12px);
+    margin: 6px;
+    height: 250px;
+    background: #fff;
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+}
+#weather .continent a::before
+{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #3e3e3e;
+    position: absolute;
+    transition: .3s linear;
+    opacity: 0;
+    transform: scale(0);
+    z-index: 1;
+}
+#weather .continent a img
+{
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    position: relative;
+}
+#weather .info
+{
+    position: absolute;
+    left: 30px;
+    bottom: 20px;
+    opacity: 0;
+    z-index: 2;
+    transition: 0.5s;
+}
+#weather .info h3, 
+#weather .info p
+{
+    color: #fff;
+}
+#weather .continent a:hover::before
+{    
+    opacity: 0.6;
+    transform: scale(1);
+}
+#weather .continent a:hover img
+{
+    width: 100%;
+    height: 100%;
+    transform: scale(1.6) rotate(25deg);
+}
+#weather .continent a:hover .info
+{
+    opacity: 1;
+}
+
 
 
 

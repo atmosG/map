@@ -48,15 +48,18 @@
             </div> -->
 
             <div class="schedule-container">
-                <form method="POST" action="" class="sked-form">
-                    <h4>항공사</h4>
-                    <select name="" id="">
-                        <option value="OZ">OZ</option>
-                        <option value="KE">KE</option>
-                    </select>
-                    <button type="submit" class="sked-refresh fas fa-sync-alt"></button>
-                </form>
                 
+                <div class="airline">
+                    <div class="airline-tab">
+                        <ul class="airline-list">
+                            <li class="airline-item">Korean Air</li>
+                            <li class="airline-item">Asiana</li>
+                            <li class="airline-item">Jeju</li>
+                            <li class="airline-item">JinAir</li>
+                        </ul>
+                    </div>
+                </div>
+
                 <div class="sked-area">
                     
                 </div>
@@ -66,13 +69,61 @@
 
     <!-- WEATHER INFO -->
     <section id="weather">
-        <div>
+        <div class="inner-width">
+            <h1 class="section-title">Weather</h1>
+            <div class="continent">
+                <a href="#">
+                    <img src="./img/wx/asia_east.jpg" alt="">
+                    <div class="info">
+                        <h3>East Asia</h3>
+                        <p>asia(east) weather page</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <img src="./img/wx/asia_south.jpg" alt="">
+                    <div class="info">
+                        <h3>Southeast Asia</h3>
+                        <p>asia(southeast) weather page</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <img src="./img/wx/asia_central.jpg" alt="">
+                    <div class="info">
+                        <h3>Russia</h3>
+                        <p>russia weather page</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <img src="./img/wx/europe.jpg" alt="">
+                    <div class="info">
+                        <h3>Europe</h3>
+                        <p>europe weather page</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <img src="./img/wx/america.jpg" alt="">
+                    <div class="info">
+                        <h3>America</h3>
+                        <p>america weather page</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <img src="./img/wx/oceania.jpg" alt="">
+                    <div class="info">
+                        <h3>Oceania</h3>
+                        <p>oceaina weather page</p>
+                    </div>
+                </a>
+
+            </div>
         </div>
     </section>
 
     <!-- AMOS -->
-    <section id="amos">
-
+    <section id="amos" class="dark-board">
+        <div class="inner-width">
+            <h3 class="section-title">AMOS</h3>
+        </div>
     </section>
 
     <!-- Operation -->
@@ -80,6 +131,7 @@
 
     </section>
 
+<script src="js/toggle.js"></script>
 <script src="js/sticky.js"></script>
 <script src="js/time.js"></script>
 </body>
