@@ -1,0 +1,452 @@
+/* color list */
+/* lightgrey : #eeeee4 */
+/* white : #f6f5ef */
+/* gray : #b8b7b3 */
+/* black : #111111 */
+/* black board : #2c2a29 */
+/* Color
+#573a3e
+#4b4247
+#cabeb2
+#e8e1d7
+#f9f8f3 */
+
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 14px;
+    color: #333;
+}
+
+::selection {
+    background-color: #e8e1d7;
+}
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #353b48;
+}
+
+/* Common Attribute */
+section
+{
+    position: relative;
+    background: #f9f8f3;
+    padding: 80px 0;
+}
+
+.inner-width
+{
+    max-width: 1140px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.section-title
+{
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    padding: 20px 80px;
+    margin-bottom: 60px;
+}
+.section-title::before
+{
+    content: "";
+    width: 80px;
+    height: 3px;
+    background: #333;
+    position: absolute;
+    left: calc(50% - 40px);
+    bottom: 2px;
+}
+.section-title::after
+{
+    content: "";
+    width: 20px;
+    height: 12px;
+    background: #a34e40;
+    border: 4px solid #f1f1f1;
+    position: absolute;
+    left: calc(50% - 13px);
+    bottom: -6px;
+}
+.dark-board
+{
+    background: #efe8e0;
+}
+
+
+/* nav section */
+.navbar
+{
+    width: 100%;
+    background-color: #efe8e0;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    transition: .2s linear;
+    height: 80px;
+}
+.navbar .inner-width
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo-container
+{
+    width: 64px;
+    height: 64px;
+}
+.navbar ul
+{
+    display: flex;
+    align-items: center;
+}
+.navbar ul li a
+{
+    color: #333;
+    padding: 15px 15px;
+    margin-right: 10px;
+    font-weight: 500;
+    transition: .2s linear;
+}
+.navbar ul li:hover a
+{
+    color: rgb(163, 78, 64);
+}
+/* home section */
+#home 
+{
+    width: 100%;
+    height: 100vh;
+    background: url('../img/bg.jpg') no-repeat;
+    background-size: cover;
+    position: relative;
+    padding: 80px 0;
+}
+#home::before
+{
+    content: "";
+    width: 100%;
+    height: 100vh;
+    background: #ffffff1a;
+    position: absolute;
+}
+#home .inner-width 
+{
+    display: flex;
+    margin-top: 50px;
+}
+#home .wx-alert
+{
+    width: 60%;
+    background-color: #ffffff1a;
+    height: calc(100% - 80px);
+}
+
+#home .schedule-container
+{
+    width: 40%;
+    height: calc(100% - 80px);
+    position: relative;
+    overflow: auto;
+}
+#home .schedule-container .airline
+{
+    width: 100%;
+    display: flex;
+}
+#home .schedule-container .airline-tab
+{
+    width: 400px;
+    height: 40px;
+    background-color: #ffffff4d;
+    border: 1px solid #ffffff80;
+    border-radius: 3px;
+    border-bottom-left-radius: 0;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+#home .schedule-container .airline-list
+{
+    width: 100%;
+    display: flex;
+    z-index: 2;
+}
+#home .schedule-container .airline-item
+{
+    width: 25%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: .5s;
+}
+#home .schedule-container .airline-item.active 
+{
+    background-color: #3e3e3e;
+    color: #f6f5ef;
+    transform: scale(1.08);
+    border-radius: 3px;
+    position: relative;
+    font-size: 16px;
+}
+#home .schedule-container .sked-area 
+{
+    height: calc(90% - 40px);
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+    border-top-left-radius: 0;
+    overflow: auto;
+}
+#home .schedule-container .sked-area table
+{
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+#home .schedule-container .sked-area thead th
+{
+    position: sticky;
+    top: 0;
+    background-color: #eee;
+}
+#home .schedule-container .sked-area table th,td
+{
+    border: 1px solid #dddddd;
+    padding: 6px;
+    text-align: center;
+}
+#home .schedule-container .sked-search
+{
+    height: 10%;
+    background-color: #ffffff4d;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+#home .schedule-container .sked-search input
+{
+    margin: 0 6px;
+    width: calc(25% - 16px);
+}
+#home .schedule-container i
+{
+    margin-left: 6px;
+    font-size: 20px;
+}
+
+
+/* Weather Section */
+#weather .continent
+{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+#weather .continent a
+{
+    width: calc(33% - 12px);
+    margin: 6px;
+    height: 250px;
+    background: #fff;
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+}
+#weather .continent a::before
+{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #3e3e3e;
+    position: absolute;
+    transition: .3s linear;
+    opacity: 0;
+    transform: scale(0);
+    z-index: 1;
+}
+#weather .continent a img
+{
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    position: relative;
+}
+#weather .info
+{
+    position: absolute;
+    left: 30px;
+    bottom: 20px;
+    opacity: 0;
+    z-index: 2;
+    transition: 0.5s;
+}
+#weather .info h3, 
+#weather .info p
+{
+    color: #fff;
+}
+#weather .continent a:hover::before
+{    
+    opacity: 0.6;
+    transform: scale(1);
+}
+#weather .continent a:hover img
+{
+    width: 100%;
+    height: 100%;
+    transform: scale(1.6) rotate(25deg);
+}
+#weather .continent a:hover .info
+{
+    opacity: 1;
+}
+
+
+/* Typhoon */
+.typhoon__cards
+{
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+    line-height: 1.5;  
+}
+.typhoon__cards .card
+{
+    width: calc(33% - 24px);
+    min-height: calc(50%);
+    text-align: center;
+    border: 1px solid #cabeb2;
+    border-radius: 15px;
+    padding: 40px;
+    /* box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;  */
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, 
+                rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, 
+                rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.typhoon__cards h4
+{
+    font-size: 19px;
+    
+}
+
+.typhoon__cards li
+{
+    text-align: left;
+    margin-top: 12px;
+    list-style-type: disc;
+}
+.typhoon__cards li a
+{
+    font-size: 17px;
+    position: relative;
+}
+.typhoon__cards li a::before
+{
+    content: "";
+    width: 100%;
+    height: 3px;
+    background: #333;
+    border-radius: 15px;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    transition: 0.1s linear;
+    transform: translateX(-20%);
+    opacity: 0;
+}
+.typhoon__cards li a:hover::before
+{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+
+#volcano-map
+{
+    width: 100%;
+    height: 500px;
+    background-image: url(../img/wroldmap.png);
+    background-repeat: no-repeat ;
+    background-size: cover;
+    position: relative;
+}
+#volcano-map a
+{
+    position: absolute;
+    padding: 20px;
+    font-weight: 700;
+    color: #125f80;
+    background: rgba(239, 232, 224,0.05);
+    border-radius: calc(30%);
+    transition: 0.1s;
+}
+#volcano-map a:nth-child(1)
+{
+    top: 160px;
+    left: 30px;
+}
+#volcano-map a:nth-child(2)
+{
+    top: 130px;
+    left: 260px;
+}
+#volcano-map a:nth-child(3)
+{
+    top: 240px;
+    left: 160px;
+}
+#volcano-map a:nth-child(4)
+{
+    top: 380px;
+    left: 320px;
+}
+#volcano-map a:nth-child(5)
+{
+    top: 100px;
+    left: 600px;
+}
+#volcano-map a:nth-child(6)
+{
+    top: 200px;
+    left: 500px;
+}
+#volcano-map a:nth-child(7)
+{
+    top: 200px;
+    left: 960px;
+}
+#volcano-map a:nth-child(8)
+{
+    top: 440px;
+    left: 870px;
+}
+#volcano-map a:nth-child(9)
+{
+    top: 360px;
+    left: 30px;
+}
+#volcano-map a:hover
+{
+    color: #333;
+    transform: scale(1.1);   
+}
+
+
+
