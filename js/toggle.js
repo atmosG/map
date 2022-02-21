@@ -583,3 +583,19 @@ $('.sked-search')
 .on("click", e => {
     if (e.target === document.querySelector('.sked-search i')) searchAirline()
 })
+
+
+// etd kst로 나와있는거 바꾸기
+// 
+function kstToUtc(str) {
+    const array = Array.from(str);
+    array.splice(4,0,'/');
+    array.splice(7,0,'/');
+    array.splice(10,0,' ');
+    array.splice(13,0,':');
+    const formattedStr = array.join('');
+
+    const utcTime = new Date(Date.parse(formattedStr));
+    return `${utcTime.getUTCDate()}${utcTime.getUTCHours()}${utcTime.getUTCMinutes()}`
+    // return utcTime.toISOString().slice(8,16).replace('T','').replace(':','');
+}

@@ -491,6 +491,3 @@ const table = {
     ZMCK : [ "UBN", "CIS" ],
     KMZJ : [ "MZJ", "AMR" ]
 };
-
-
-export { table };
