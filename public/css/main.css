@@ -148,11 +148,37 @@ section
     display: flex;
     margin-top: 50px;
 }
+#home table
+{
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+#home thead th
+{
+    position: sticky;
+    top: 0;
+    background-color: #eee;
+}
+#home table th,td
+{
+    border: 1px solid #dddddd;
+    padding: 6px;
+    text-align: center;
+}
 #home .wx-alert
 {
     width: 60%;
     background-color: #ffffff1a;
     height: calc(100% - 80px);
+    overflow: auto;
+    z-index: 2;
+}
+#home .wx-alert ul li
+{
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 10px 1rem;
 }
 
 #home .schedule-container
@@ -214,24 +240,7 @@ section
     border-top-left-radius: 0;
     overflow: auto;
 }
-#home .schedule-container .sked-area table
-{
-    width: 100%;
-    border-collapse: collapse;
-    background-color: #ffffff;
-}
-#home .schedule-container .sked-area thead th
-{
-    position: sticky;
-    top: 0;
-    background-color: #eee;
-}
-#home .schedule-container .sked-area table th,td
-{
-    border: 1px solid #dddddd;
-    padding: 6px;
-    text-align: center;
-}
+
 #home .schedule-container .sked-search
 {
     height: 10%;
@@ -243,12 +252,13 @@ section
 #home .schedule-container .sked-search input
 {
     margin: 0 6px;
-    width: calc(25% - 16px);
+    width: calc(25% - 20px);
 }
 #home .schedule-container i
 {
     margin-left: 6px;
     font-size: 20px;
+    cursor: pointer;
 }
 
 

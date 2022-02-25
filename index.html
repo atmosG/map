@@ -16,16 +16,14 @@
     <link rel="stylesheet" href="./public/css/main.css">
 
     <script defer src="./public/js/toggle.js"></script>
-    <script defer src="./public/js/sticky.js"></script>
-    <script defer src="./public/js/time.js"></script>
-    
+    <script defer src="./public/js/weather.js"></script> 
 </head>
 <body>
     <!-- Navbar-->
     <nav class="navbar">
         <div class="inner-width">
             <div class="logo-container">
-            
+                <button id="test">click</button>
             </div>
             <div class="menu-container">
                 <ul>
@@ -42,9 +40,19 @@
         
     <!-- HOME -->
     <section id="home">
+        
         <div class="inner-width">
             <div class="wx-alert">
-                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>AIRPORT</th>
+                            <th>ISSUED TIME</th>
+                            <th>TAF MSG</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
             </div>
             
 
